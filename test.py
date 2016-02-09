@@ -19,21 +19,33 @@ class TestSuite(unittest.TestCase):
         self.failIf(len(output.getvalue().splitlines()) != 100)
     def test_three(self):
         app = FizzBuzz()
-        self.failIf(app.calc(3) != "Fizz")
         self.failIf(app.calc(6) != "Fizz")
         self.failIf(app.calc(9) != "Fizz")
+        self.failIf(app.calc(12) != "Fizz")
     def test_four(self):
         app = FizzBuzz()
-        self.failIf(app.calc(5) != "Buzz")
         self.failIf(app.calc(10) != "Buzz")
         self.failIf(app.calc(20) != "Buzz")
+        self.failIf(app.calc(25) != "Buzz")
     def test_five(self):
         app = FizzBuzz()
         self.failIf(app.calc(15) != "FizzBuzz")
         self.failIf(app.calc(30) != "FizzBuzz")
         self.failIf(app.calc(45) != "FizzBuzz")
-
 	
+    def test_six(self):
+        app = FizzBuzz()
+        self.failIf(app.calc(2) != "2 is prime")
+	
+    def test_prime(self):
+        output = StringIO()
+        kpl = 0
+        if (len(output.getvalue()) <= 7):
+			kpl = kpl +1
+        app = FizzBuzz()
+        app.run(100)
+        self.failIf(kpl != 25)
+		
 def main():
     unittest.main()
 

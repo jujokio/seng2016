@@ -23,12 +23,20 @@ class FizzBuzz():
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
 		viesti = i
-		if (i % 3 == 0):
-			viesti = "Fizz"
-		if (i % 5 == 0):
-			viesti = "Buzz"
 		if (i % 3==0 and i % 5 == 0):
 			viesti = "FizzBuzz"
+		elif (i % 3 == 0):
+			viesti = "Fizz"
+		elif (i % 5 == 0):
+			viesti = "Buzz"
+		
+		j = 2
+		prime = True		
+		for j in range(2,i):
+			if (i % j == 0):
+				prime = False
+		if (prime == True and i != 1):	
+			viesti = "%d is prime" % i
 		return viesti
 if __name__ == "__main__":
     app = FizzBuzz()
