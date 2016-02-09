@@ -22,8 +22,15 @@ class FizzBuzz():
 
     # Seems to give correct values. Tested with 1 and 2.
     def calc(self, i):
-        return i
-
+		viesti = i
+		if (i % 3 == 0):
+			viesti = "Fizz"
+		if (i % 5 == 0):
+			viesti = "Buzz"
+		if (i % 3==0 and i % 5 == 0):
+			viesti = "FizzBuzz"
+		return viesti
 if __name__ == "__main__":
     app = FizzBuzz()
     app.run(100)
+    
