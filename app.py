@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import sys
-
+#maa oon GURU
 # Implementation of FizzBuzz v0.00
 
 # Version 1: if number is divisible by 3, print Fizz
